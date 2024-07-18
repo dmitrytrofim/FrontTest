@@ -1,18 +1,32 @@
 <template>
  <div class="items">
-  <draggable class="dragArea list-group w-full items__inner" :list="store.list">
-   <div class="items__cell" v-for="item in store.list" :key="item.id">
-    {{ item.name }}
-   </div>
-  </draggable>
+  <Sortable
+   tag="div"
+   class="dragArea list-group w-full items__inner"
+   :list="store.list"
+   :options="{
+    swap: true
+   }"
+  >
+   <template #item="{ element }">
+    <div class="items__cell">
+     {{ element.name }}
+    </div>
+   </template>
+  </Sortable>
  </div>
 </template>
 
 <script lang="ts" setup>
-import { VueDraggableNext } from 'vue-draggable-next';
+import SortableJs from 'sortablejs';
+//@ts-ignore
+import { Swap } from 'sortablejs/modular/sortable.core.esm';
+SortableJs.mount(new Swap());
+
+import { Sortable } from 'sortablejs-vue3';
+
 import { useInventoryStore } from '~/stores/inventory';
 const store = useInventoryStore();
-const draggable = VueDraggableNext;
 </script>
 
 <style scoped lang="scss">
