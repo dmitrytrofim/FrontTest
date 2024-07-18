@@ -1,4 +1,5 @@
 export interface ItemInterface {
- name: any;
+ url: any;
  id: number;
+ count: number;
 }
