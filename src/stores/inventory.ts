@@ -47,9 +47,9 @@ export const useInventoryStore = defineStore('name', () => {
  const toggleTheme = () => {
   themeDark.value = !themeDark.value;
   if (themeDark.value) {
-   document.body.classList.remove('j-light');
+   document.querySelector('html')!.classList.remove('j-light');
   } else {
-   document.body.classList.add('j-light');
+   document.querySelector('html')!.classList.add('j-light');
   }
  };
 

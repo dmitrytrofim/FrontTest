@@ -82,7 +82,7 @@ const choiceItem = (elem: ItemInterface) => {
   right: 0;
   font-size: 10px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--t-fff-06);
   padding: 4px 5px 2px 5px;
   border-left: 1px solid var(--b-4d4d4d);
   border-top: 1px solid var(--b-4d4d4d);
