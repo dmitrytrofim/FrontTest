@@ -52,6 +52,7 @@
  --b-000: #000;
  --b-1d1d1d: #1d1d1d;
  --b-262626: #262626;
+ --b-4d4d4d: #4d4d4d;
  --b-grad-gray: linear-gradient(90deg, #3c3c3c 0%, #444 51.04%, #333 100%);
 
  // font-size
@@ -91,7 +92,7 @@
 // }
 
 //@mark page
-body.page {
+body {
  font-family: 'Inter', sans-serif;
  font-weight: 400;
  font-size: 14px;
@@ -116,7 +117,7 @@ body.page {
 //@mark container
 .container {
  width: 100%;
- max-width: 1200px;
+ max-width: 805px;
  margin: 0 auto;
  padding: 0 10px;
 }
