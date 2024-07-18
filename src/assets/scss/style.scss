@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 //@mark functions
 @function em($a) {
  @return calc($a/16) + em;
@@ -40,25 +42,25 @@
 
  // text colors
  --t-fff: #fff;
+ --t-fff-04: rgba(255, 255, 255, 0.4);
  --t-000: #000;
+ --t-1d1d1d: #1d1d1d;
+ --t-2d2d2d: #2d2d2d;
 
  // background colors
  --b-fff: #fff;
  --b-000: #000;
- // --b-grad-red: ;
+ --b-1d1d1d: #1d1d1d;
+ --b-262626: #262626;
+ --b-grad-gray: linear-gradient(90deg, #3c3c3c 0%, #444 51.04%, #333 100%);
 
  // font-size
  --sz-16: 16px;
 }
 
 //@mark start
-// @import './different/fonts';
 @import './different/normalize';
 @import './different/custom-reset';
-// @import '../../node_modules/swiper/swiper-bundle';
-// @import '../../node_modules/@splidejs/splide/dist/css/splide.min';
-// @import '../../node_modules/locomotive-scroll/dist/locomotive-scroll';
-// @import '../../node_modules/photoswipe/dist/photoswipe';
 
 //@mark scroll
 ::-webkit-scrollbar-button {
@@ -90,12 +92,12 @@
 
 //@mark page
 body.page {
- font-family: var(--);
+ font-family: 'Inter', sans-serif;
  font-weight: 400;
- font-size: var(--);
+ font-size: 14px;
  line-height: 1.2;
- color: var(--);
- background-color: var(--);
+ color: var(--t-fff);
+ background-color: var(--b-1d1d1d);
  &.j-lock {
   overflow: hidden;
  }
@@ -104,10 +106,10 @@ body.page {
 //@mark wrapper
 .wrapper {
  position: relative;
- display: grid;
+ display: flex;
+ justify-content: center;
+ align-items: center;
  min-height: 100dvh;
- grid-template-columns: minmax(300px, 1fr);
- grid-template-rows: auto 1fr auto;
  overflow: hidden;
 }
 
