@@ -1,6 +1,7 @@
 <template>
  <div class="inventory">
   <div class="inventory__inner">
+   <ToggleTheme />
    <div class="inventory__row">
     <InventoryInformation class="inventory__information" />
     <InventoryItems class="inventory__items" />
@@ -14,6 +15,7 @@
 import InventoryInformation from '~/components/InventoryInformation.vue';
 import InventoryItems from '~/components/InventoryItems.vue';
 import InventoryPlank from '~/components/InventoryPlank.vue';
+import ToggleTheme from '~/components/ToggleTheme.vue';
 </script>
 
 <style scoped lang="scss">
