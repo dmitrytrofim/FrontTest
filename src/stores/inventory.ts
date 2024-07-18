@@ -42,7 +42,6 @@ export const useInventoryStore = defineStore('name', () => {
    fillList(maxCells);
    closePopup();
   }
-  console.log(list.value);
  };
  const toggleTheme = () => {
   themeDark.value = !themeDark.value;
